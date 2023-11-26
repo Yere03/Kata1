@@ -1,3 +1,5 @@
+import static java.lang.Math.pow;
+
 public class Person {
     private String Name;
     private double Weight;
@@ -7,6 +9,9 @@ public class Person {
         Name = name;
         Weight = weight;
         Height = height;
+    }
+    public double getIMC(){
+        return getWeight()/pow(getHeight(),2);
     }
 
     @Override
